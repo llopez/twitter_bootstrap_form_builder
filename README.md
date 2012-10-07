@@ -1,24 +1,24 @@
 # TwitterBootstrapFormBuilder
 
-TODO: Write a gem description
+Simple FormBuilder for Rails3 using TwitterBootstrap Css Framework
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'twitter_bootstrap_form_builder'
+    gem 'twitter_bootstrap_form_builder', :git => "git@github.com:llopez/twitter_bootstrap_form_builder.git"
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install twitter_bootstrap_form_builder
-
 ## Usage
 
-TODO: Write usage instructions here
+It is very simple. Do the next.
+
+    = form_for @resource, builder: TwitterBootstrapFormBuilder::FormBuilder do |f|
+      = f.text_field :name
+      = f.submit
 
 ## Contributing
 
