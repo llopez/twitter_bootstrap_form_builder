@@ -16,9 +16,26 @@ And then execute:
 
 It is very simple. Do the next.
 
-    = form_for @resource, builder: TwitterBootstrapFormBuilder::FormBuilder do |f|
+    = form_for @resource, builder: TwitterBootstrapFormBuilder::FormBuilder, html: {class: "form-horizontal"} do |f|
       = f.text_field :name
       = f.submit
+      
+And you will get the following:
+
+    <form>
+      <div class="control-group">
+        <label class="control-label" for="resource_name">Name</label>
+        <div class="controls">
+          <input type="text" id="resource_name" name="resource[name]">
+          <span class="help-inline">Errors appear here.</span>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <input class="btn" name="commit" type="submit" value="Submit">
+        </div>
+      </div>
+    </form>
 
 ## Contributing
 
